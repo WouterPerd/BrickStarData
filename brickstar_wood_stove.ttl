@@ -1,0 +1,129 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdgo: <http://metadata.un.org/sdg/ontology#> .
+@prefix sdg: <http://metadata.un.org/sdg/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix aia: <http://www.purl.org/aiaontology#> .
+@prefix aiap: <http://www.aia-projects.org/Brickstar/> .
+@prefix xsd: <http://ww.w3.org/2001/XMLSchema#> .
+
+aiap:Brickstar_Wood_Stove a aia:Project .
+# verander dalk na activity hasObjective
+aiap:Brickstar_Wood_Stove aia:hasObjective "End-user energy efficiency improvement."^^xsd:string .
+aiap:Brickstar_Wood_Stove aia:hasSDGs sdg:1, sdg:2, sdg:3, sdg:7, sdg:10, sdg:15 .
+aiap:Brickstar_Wood_Stove rdfs:seeAlso <hhtp://www.example.org/stove-specs> .
+aiap:Brickstar_Wood_Stove rdfs:seeAlso <hhtp://www.example.org/emission_reduction_data> .
+
+aiap:Brickstar_Wood_Stove aia:StartDate "7 January 2015"^^xsd:string .
+aiap:Brickstar_Wood_Stove aia:EndDate "7 January 2025"^^xsd:string .
+aiap:Brickstar_Wood_Stove aia:hasDuration "10 years"^^xsd:string .
+
+aiap:Brickstar_Wood_Stove aia:CarbonCreditingPeriodType "fixed" .
+aiap:Brickstar_Wood_Stove aia:CarbonCreditingPeriodStartDate "17 January 2017" .
+aiap:Brickstar_Wood_Stove aia:CarbonCreditingPeriodEndDate "17 January 2027" .
+aiap:Brickstar_Wood_Stove aia:CarbonCreditingPeriod "10 years" .
+
+aiap:Brickstar_Wood_Stove aia:methodology "Baseline Methodology"^^xsd:string .
+
+aiap:Brickstar_Wood_Stove rdfs:comment """
+The Nova Institute aims through the implementation of this project to offer an alternative method of
+cooking to households situated in the rural areas of the Limpopo province of South Africa. This
+alternative method will take form through the implementation of an improved cooking stoves making
+use of the 'rocket stove' concept pioneered by Dr. Larry Winiarski in 19821. The implementation of the
+cooking mechanism potentially addresses unsustainable problems regarding indoor air pollution,
+deforestation, economic income instability, greenhouse gas emissions and the safety of the Tzaneen-Veldpikkewyn
+species through interaction with these communities at household level.
+The project will result in the following improvements of livelihoods of people in the project area: 
+Environmental: Reduction of greenhouse gas emissions, improvement of indoor air quality due to less 
+smoke, and reduction of deforestation in important water catchment areas (such as the Greater 
+Limpopo River), due to considerable decreased consumption of fuel wood and contributing in 
+preservation of the near-by National Parks as well as larger agricultural area of Tzaneen. Each 
+household will save approximately 700 kg of wood annually; cumulatively 700kg x 2500= 1750 tonnes 
+annually; 17500 tonnes over the 10 year GS project period5.  
+Economic: Household income improvement, due to time saved from wood collection that can be 
+employed in productive activities. Each household saves approximately R600 in cash for wood 
+annually; cumulatively R600 x 2500 = R1.5 million annually; R15m over the 10 year GS project period6. 
+The project is also supporting clean energy technology expansion in Limpopo Province, South Africa. 
+Social: The project will allow better access to affordable and cleaner energy services; women and 
+children will save time from wood gathering, and the possibility of personal empowerment through 
+contributing to improved global and local ecological standards. A number of temporary jobs will be 
+created in local communities during the implementation phase of the project. 
+"""^^xsd:string .
+
+aiap:Tzaneen a aia:Location .
+aiap:Tzaneen rdfs:label "Tzaneen, Limpopo, South Africa" .
+aiap:Tzaneen aia:hasLatitude "30.1358"^^xsd:float .
+aiap:Tzaneen aia:hasLongitude "-23.832"^^xsd:float .
+
+aiap:Brickstar_Wood_Stove aia:hasLocation aiap:Tzaneen .
+
+aiap:State_Before a aia:State ;
+    aia:hasParval
+        [
+            aia:hasName "Emissions" ;
+            aia:hasUnitOfMeasure "ton_CO2/household/year" ;
+            aia:hasValue "2"^^xsd:float 
+        ],
+        [
+            aia:hasName "Wood_Used" ;
+            aia:hasUnitOfMeasure "kg/day" ;
+            aia:hasValue "100"^^xsd:float
+        ],
+        [
+            aia:hasName "Expenses" ;
+            aia:hasUnitOfMeasure "ZAR/household/year" ;
+            aia:hasValue "0"^^xsd:float
+        ],
+        [
+            aia:hasName "Penguins_Killed" ;
+            aia:hasUnitOfMeasure "penguins/household/year" ;
+            aia:hasValue "150"^^xsd:integer
+        ],
+        [
+            aia:hasName "Deforestation" ;
+            aia:hasUnitOfMeasure "ha/year" ;
+            aia:hasValue "30"^^xsd:float
+        ],
+        [
+            aia:hasName "Energy_Used" ;
+            aia:hasUnitOfMeasure "kW/household/year" ;
+            aia:hasValue "5"^^xsd:integer
+        ] .
+
+aiap:State_After a aia:State ;
+    aia:hasParval
+        [
+            aia:hasName "Emissions" ;
+            aia:hasUnitOfMeasure "ton_CO2/household/year" ;
+            aia:hasValue "0.5"^^xsd:float 
+        ],
+        [
+            aia:hasName "Wood_Used" ;
+            aia:hasUnitOfMeasure "kg/day" ;
+            aia:hasValue "80"^^xsd:float
+        ],
+        [
+            aia:hasName "Expenses" ;
+            aia:hasUnitOfMeasure "ZAR/household/year" ;
+            aia:hasValue "900"^^xsd:float
+        ],
+        [
+            aia:hasName "Penguins_Killed" ;
+            aia:hasUnitOfMeasure "penguins/household/year" ;
+            aia:hasValue "500"^^xsd:integer
+        ],
+        [
+            aia:hasName "Deforestation" ;
+            aia:hasUnitOfMeasure "ha/year" ;
+            aia:hasValue "3"^^xsd:float
+        ],
+        [
+            aia:hasName "Energy_Used" ;
+            aia:hasUnitOfMeasure "kW/household/year" ;
+            aia:hasValue "7"^^xsd:integer
+        ] .
+
+aia:Impact aia:derivedFrom
+    aia:State_Before ,
+    aia:State_After .
