@@ -9,7 +9,6 @@
 @prefix xsd: <http://ww.w3.org/2001/XMLSchema#> .
 
 aiap:Brickstar_Wood_Stove a aia:Project .
-# verander dalk na activity hasObjective
 aiap:Brickstar_Wood_Stove aia:hasObjective "End-user energy efficiency improvement."^^xsd:string .
 aiap:Brickstar_Wood_Stove aia:hasSDGs sdg:1, sdg:2, sdg:3, sdg:7, sdg:10, sdg:15 .
 aiap:Brickstar_Wood_Stove rdfs:seeAlso <hhtp://www.example.org/stove-specs> .
@@ -59,71 +58,173 @@ aiap:Tzaneen aia:hasLongitude "-23.832"^^xsd:float .
 aiap:Brickstar_Wood_Stove aia:hasLocation aiap:Tzaneen .
 
 aiap:State_Before a aia:State ;
-    aia:hasParval
-        [
-            aia:hasName "Emissions" ;
-            aia:hasUnitOfMeasure "ton_CO2/household/year" ;
-            aia:hasValue "2"^^xsd:float 
-        ],
-        [
-            aia:hasName "Wood_Used" ;
-            aia:hasUnitOfMeasure "kg/day" ;
-            aia:hasValue "100"^^xsd:float
-        ],
-        [
-            aia:hasName "Expenses" ;
-            aia:hasUnitOfMeasure "ZAR/household/year" ;
-            aia:hasValue "0"^^xsd:float
-        ],
-        [
-            aia:hasName "Penguins_Killed" ;
-            aia:hasUnitOfMeasure "penguins/household/year" ;
-            aia:hasValue "150"^^xsd:integer
-        ],
-        [
-            aia:hasName "Deforestation" ;
-            aia:hasUnitOfMeasure "ha/year" ;
-            aia:hasValue "30"^^xsd:float
-        ],
-        [
-            aia:hasName "Energy_Used" ;
-            aia:hasUnitOfMeasure "kW/household/year" ;
-            aia:hasValue "5"^^xsd:integer
-        ] .
+	aia:hasParval
+		[
+			aia:hasName "Emissions_for_Wood_BS"^^xsd:string ;
+			aia:hasUnitOfMeasure "tCO2/TJ"^^xsd:string ;
+			aia:hasValue "112"^^xsd:float 
+		],
+		[
+			aia:hasName "Wood_Used"^^xsd:string ;
+			aia:hasUnitOfMeasure "kg/day"^^xsd:string ;
+			aia:hasValue "100"^^xsd:float
+		],
+		[
+			aia:hasName "Expenses"^^xsd:string ;
+			aia:hasUnitOfMeasure "ZAR/household/year"^^xsd:string ;
+			aia:hasValue "0"^^xsd:float
+		],
+		[
+			aia:hasName "Penguins_Killed"^^xsd:string ;
+			aia:hasUnitOfMeasure "penguins/household/year"^^xsd:string ;
+			aia:hasValue "150"^^xsd:integer
+		],
+		[
+			aia:hasName "Deforestation"^^xsd:string ;
+			aia:hasUnitOfMeasure "ha/year"^^xsd:string ;
+			aia:hasValue "30"^^xsd:float
+		],
+		[
+			aia:hasName "Energy_Used"^^xsd:string  ;
+			aia:hasUnitOfMeasure "kW/household/year"^^xsd:string ;
+			aia:hasValue "5"^^xsd:integer
+		],
+		[
+			aia:hasName "Net_Calorific_Value_BS"^^xsd:string ;
+			aia:hasUnitOfMeasure "TJ/tonne"^^xsd:string ;
+			aia:hasValue "0.015"^^xsd:float
+		],
+		[
+			aia:hasName "Non_Emissions_for_Wood_BS"^^xsd:string ;
+			aia:hasUnitOfMeasure "tCO2/TJ"^^xsd:string ;
+			aia:hasValue "8.692"^^xsd:float
+		],
+		[
+			aia:hasName "Net_Calorific_Value_PS"^^xsd:string ;
+			aia:hasUnitOfMeasure "TJ/tonne"^^xsd:string ;
+			aia:hasValue "0.015"^^xsd:float
+		],
+		[
+			aia:hasName "Woody_Biomass_Saved"^^xsd:string ;
+			aia:hasUnitOfMeasure "Fractional non-renewability"^^xsd:string ;
+			aia:hasValue "0.91"^^xsd:float
+		],
+		[
+			aia:hasName "Fuel_Consumed_BS"^^xsd:string ;
+			aia:hasUnitOfMeasure "tonnes/household/year"^^xsd:string ;
+			aia:hasValue "3.644"^^xsd:float
+		],
+		[
+			aia:hasName "Project_Devices_Operating"^^xsd:string ;
+			aia:hasUnitOfMeasure "Project Technologies Credited"^^xsd:string ;
+			aia:hasValue "0"^^xsd:float
+		],
+		[
+			aia:hasName "Fuel_Consumed"^^xsd:string ;
+			aia:hasUnitOfMeasure "Tonne/Stove/Year"^^xsd:string ;
+			aia:hasValue "0"^^xsd:float
+		],
+		[
+			aia:hasName "Usage_Rate_Devices"^^xsd:string ;
+			aia:hasUnitOfMeasure "%"^^xsd:string ;
+			aia:hasValue "0"^^xsd:float
+		],
+		[
+			aia:hasName "Commisioning_Project_Device"^^xsd:string ;
+			aia:hasUnitOfMeasure "Date"^^xsd:string ;
+			aia:hasValue ""^^xsd:float
+		],
+		[
+			aia:hasName "Leakage_Project_Scenario"^^xsd:string ;
+			aia:hasUnitOfMeasure "tCO2e"^^xsd:string ;
+			aia:hasValue "0"^^xsd:float
+		] .
 
 aiap:State_After a aia:State ;
-    aia:hasParval
-        [
-            aia:hasName "Emissions" ;
-            aia:hasUnitOfMeasure "ton_CO2/household/year" ;
-            aia:hasValue "0.5"^^xsd:float 
-        ],
-        [
-            aia:hasName "Wood_Used" ;
-            aia:hasUnitOfMeasure "kg/day" ;
-            aia:hasValue "80"^^xsd:float
-        ],
-        [
-            aia:hasName "Expenses" ;
-            aia:hasUnitOfMeasure "ZAR/household/year" ;
-            aia:hasValue "900"^^xsd:float
-        ],
-        [
-            aia:hasName "Penguins_Killed" ;
-            aia:hasUnitOfMeasure "penguins/household/year" ;
-            aia:hasValue "500"^^xsd:integer
-        ],
-        [
-            aia:hasName "Deforestation" ;
-            aia:hasUnitOfMeasure "ha/year" ;
-            aia:hasValue "3"^^xsd:float
-        ],
-        [
-            aia:hasName "Energy_Used" ;
-            aia:hasUnitOfMeasure "kW/household/year" ;
-            aia:hasValue "7"^^xsd:integer
-        ] .
+	aia:hasParval
+		[
+			aia:hasName "Emissions_for_Wood_BS"^^xsd:string ;
+			aia:hasUnitOfMeasure "tCO2/TJ"^^xsd:string ;
+			aia:hasValue "0.5"^^xsd:float 
+		],
+		[
+			aia:hasName "Wood_Used"^^xsd:string ;
+			aia:hasUnitOfMeasure "kg/day"^^xsd:string ;
+			aia:hasValue "80"^^xsd:float
+		],
+		[
+			aia:hasName "Expenses"^^xsd:string ;
+			aia:hasUnitOfMeasure "ZAR/household/year"^^xsd:string ;
+			aia:hasValue "900"^^xsd:float
+		],
+		[
+			aia:hasName "Penguins_Killed"^^xsd:string ;
+			aia:hasUnitOfMeasure "penguins/household/year"^^xsd:string ;
+			aia:hasValue "500"^^xsd:integer
+		],
+		[
+			aia:hasName "Deforestation"^^xsd:string ;
+			aia:hasUnitOfMeasure "ha/year"^^xsd:string ;
+			aia:hasValue "3"^^xsd:float
+		],
+		[
+			aia:hasName "Energy_Used"^^xsd:string ;
+			aia:hasUnitOfMeasure "kW/household/year"^^xsd:string ;
+			aia:hasValue "7"^^xsd:integer
+		],
+		[
+			aia:hasName "Net_Calorific_Value_BS"^^xsd:string ;
+			aia:hasUnitOfMeasure "TJ/tonne"^^xsd:string ;
+			aia:hasValue "0.008"^^xsd:float
+		],
+		[
+			aia:hasName "Non_Emissions_for_Wood_BS"^^xsd:string ;
+			aia:hasUnitOfMeasure "tCO2/TJ"^^xsd:string ;
+			aia:hasValue "3.585"^^xsd:float
+		],
+		[
+			aia:hasName "Net_Calorific_Value_PS"^^xsd:string ;
+			aia:hasUnitOfMeasure "TJ/tonne"^^xsd:string ;
+			aia:hasValue "0.009"^^xsd:float
+		],
+		[
+			aia:hasName "Woody_Biomass_Saved"^^xsd:string ;
+			aia:hasUnitOfMeasure "Fractional non-renewability"^^xsd:string ;
+			aia:hasValue "3.4"^^xsd:float
+		],
+		[
+			aia:hasName "Fuel_Consumed_BS"^^xsd:string ;
+			aia:hasUnitOfMeasure "tonnes/household/year"^^xsd:string ;
+			aia:hasValue "1.545"^^xsd:float
+		],
+		[
+			aia:hasName "Project_Devices_Operating"^^xsd:string ;
+			aia:hasUnitOfMeasure "Project Technologies Credited"^^xsd:string ;
+			aia:hasValue "2500"^^xsd:float
+		],
+		[
+			aia:hasName "Fuel_Consumed"^^xsd:string ;
+			aia:hasUnitOfMeasure "Tonne/Stove/Year "^^xsd:string ;
+			aia:hasValue "2.113"^^xsd:float
+		],
+		[
+			aia:hasName "Usage_Rate_Devices"^^xsd:string ;
+			aia:hasUnitOfMeasure "%"^^xsd:string ;
+			aia:hasValue "70"^^xsd:float
+		],
+		[
+			aia:hasName "Commisioning_Project_Device"^^xsd:string ;
+			aia:hasUnitOfMeasure "Date"^^xsd:string ;
+			aia:hasValue ""^^xsd:float
+		],
+		[
+			aia:hasName "Leakage_Project_Scenario"^^xsd:string ;
+			aia:hasUnitOfMeasure "tCO2e"^^xsd:string ;
+			aia:hasValue "0"^^xsd:float
+		] .
 
 aia:Impact aia:derivedFrom
-    aia:State_Before ,
-    aia:State_After .
+	aia:State_Before ,
+	aia:State_After .
+
+aiap:Project_Director a aia:Agent.
